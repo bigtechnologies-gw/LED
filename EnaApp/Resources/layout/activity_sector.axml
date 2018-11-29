@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/relativeLayoutParent"
+	>
+	<TextView
+		android:text="Select sector"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/textViewSelectSector"
+		android:layout_centerHorizontal="true"
+		android:layout_above="@+id/gridLayoutSectors"
+		android:textSize="35dp"
+		android:gravity="center"
+		android:textAllCaps="true"
+		android:textStyle="bold|normal" 
+	/>
+	<GridLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/gridLayoutSectors"
+		android:columnCount="4"
+		android:useDefaultMargins="true"
+		android:orientation="horizontal"
+		android:rowOrderPreserved="true"
+		android:layout_margin="20dp"
+		android:layout_centerInParent="true" />
+
+</RelativeLayout>

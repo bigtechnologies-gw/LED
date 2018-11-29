@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">EnaApp</string>
+    <string name="action_settings">Settings</string>
+  
+  <string-array name="array_name">
+    <item>Community One</item>
+    <item>Community Two</item>
+    <item>Community Three</item>
+  </string-array>
+
+  <string-array name="nearPosition">
+    <item>Near Sear</item>
+    <item>Near forest</item>
+    <item>Near desert</item>
+  </string-array>
+
+  <string-array name="othersArray">
+    <item>Near Sear</item>
+    <item>Near forest</item>
+    <item>Near desert</item>
+  </string-array>
+  
+</resources>
