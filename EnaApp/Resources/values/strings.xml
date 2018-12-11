@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EnaApp</string>
+    <string name="app_name">LED-App</string>
     <string name="action_settings">Settings</string>
   
   <string-array name="array_name">

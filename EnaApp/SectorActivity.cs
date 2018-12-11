@@ -5,6 +5,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
+using static Android.Views.ViewGroup;
 
 namespace EnaApp
 {
@@ -23,7 +24,7 @@ namespace EnaApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_sector);
 
-            var relativeLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutParent);
+            var relativeLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutSectorParent);
             var gridLayout = relativeLayout.FindViewById<GridLayout>(Resource.Id.gridLayoutSectors);
             // already defined in design-mode
             //gridLayout.ColumnCount = 4;
@@ -49,29 +50,52 @@ namespace EnaApp
                 builder.Show();
                 return;
             }
+
+            // start choose-communit intent
+            var intent = new Intent(this, typeof(CommunityContentFragment));
+
+            // computed width
+            var computedWidth = (Resources.DisplayMetrics.WidthPixels / 4) - (2 * ((MarginLayoutParams)gridLayout.LayoutParameters).RightMargin);
+
             // convert int to dp
             // https://stackoverflow.com/questions/40819194/how-to-convert-dp-to-px-in-xamarin-android
             //var dp = 100;
             //int pixel = (int)TypedValue.ApplyDimension(ComplexUnitType.Dip, dp, );
             foreach (var sector in result)
             {
-                var button = new Button(this)// , Android.Runtime.JniHandleOwnership)
+                //var button = new Button(this)// , Android.Runtime.JniHandleOwnership)
+                //{
+                //    Text = sector,
+                //};
+
+                var buttonWithStyle = new Button(new ContextThemeWrapper(this, Resource.Style.LEDButtonStyle))
                 {
-                    Text = sector,
+                    Text = sector
                 };
-                button.TextSize = 24;
-                button.SetWidth(500);
-                button.TextAlignment = /*TextAlignment.Center | */TextAlignment.ResolvedDefault;
+
+                //buttonWithStyle.LayoutParameters = new LayoutParams()
+                //var marginLayout = button.LayoutParameters as MarginLayoutParams;
+                //button.TextSize = 20;
+                //button.SetWidth(150);
+                //button.TextAlignment = /*TextAlignment.Center | */TextAlignment.ResolvedDefault;
                 //button.SetMinWidth(150) ;/*TypedValue.ApplyDimension(ComplexUnitType.Dip, 20, DisplayMetrics.)*/
-                button.Click += (sender, e) =>
+
+                //buttonWithStyle.LayoutParameters = new LayoutParams(computedWidth, ViewGroup.LayoutParams.WrapContent);
+                buttonWithStyle.Click += (sender, e) =>
                 {
-                    var intent = new Intent(this, typeof(ChooseCommunity));
+                    //StartActivity(intent);
+
                     StartActivity(intent);
                 };
-                gridLayout.AddView(button);
+                
+                // NOTE: There is a layout gravity set in style in order to fix button gravity
+                // that is very inportant.
+                
+                //gridLayout.AddView(button, 0, ViewGroup.LayoutParams.FillParent);
+                gridLayout.AddView(buttonWithStyle);
                 //this.AddContentView(button, Viewgou)
             }
-            
+
 
             // returns => quinara/tombali....
             //string clickedRegion = Intent.GetStringExtra("Region");
@@ -84,6 +108,8 @@ namespace EnaApp
 
         public override View OnCreateView(View parent, string name, Context context, IAttributeSet attrs)
         {
+            //note: this is going to get called whenever each control is created!
+            // e.g: if there are 20 controls it will be called like 20 times.
             return base.OnCreateView(parent, name, context, attrs);
             // NOTE: infinity loop! Why?
             //var inflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);

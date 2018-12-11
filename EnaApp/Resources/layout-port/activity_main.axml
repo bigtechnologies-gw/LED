@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/led_logo_footer_p"
+	android:gravity="center"
+	android:minWidth="25px"
+	android:minHeight="25px">
+	<ImageView
+		style="@style/LEDLogoStyle"
+		android:layout_marginBottom="25dip"
+		android:layout_above="@+id/textView1"
+		android:id="@+id/imageView1" />
+	<TextView
+		android:text="SELECT REGION"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="50dip"
+		android:layout_above="@+id/gridLayout1"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/textView1"
+		android:textStyle="bold"
+		android:textColor="@color/ledPrimary" />
+	<GridLayout
+		android:columnCount="3"
+		android:background="@drawable/customborder"
+		android:layout_centerInParent="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/gridLayout1"
+		android:columnOrderPreserved="true"
+		android:useDefaultMargins="true"
+		android:rowOrderPreserved="true"
+		android:alignmentMode="alignBounds"
+		android:orientation="horizontal"
+		>
+		<Button
+			android:text="Bafatá"
+			android:width="@dimen/regionWidth"
+			android:height="100dp"
+			android:textSize="30dp"
+			android:id="@+id/buttonBafata"
+			android:tag="bafata"
+		/>
+		<Button
+			android:text="Biombo"
+			android:width="@dimen/regionWidth"
+			android:height="100dp"
+			android:tag="biombo"
+			android:textSize="30dp"
+			android:id="@+id/buttonBiombo" />
+		<Button
+			android:text="Bolama"
+			android:tag="bolama"
+			android:width="@dimen/regionWidth"
+			android:height="100dp"
+			android:textSize="30dp"
+			android:id="@+id/buttonBolama" />
+		<Button
+			android:text="Cacheu"
+			android:tag="cacheu"
+			android:width="@dimen/regionWidth"
+			android:height="100dp"
+			android:textSize="30dp"
+			android:id="@+id/buttonCacheu" />
+		<Button
+			android:text="Gabu"
+			android:tag="gabu"
+			android:width="@dimen/regionWidth"
+			android:height="100dp"
+			android:textSize="30dp"
+			android:id="@+id/buttonGabu" />
+		<Button
+			android:text="Oio"
+			android:tag="oio"
+			android:width="@dimen/regionWidth"
+			android:height="100dp"
+			android:textSize="30dp"
+			android:id="@+id/buttonOio" />
+		<Button
+			android:text="Quinara"
+			android:tag="quinara"
+			android:width="@dimen/regionWidth"
+			android:height="100dp"
+			android:textSize="30dp"
+			android:id="@+id/buttonQuinara" />
+		<Button
+			android:text="Tombali"
+			android:tag="Tombali"
+			android:width="@dimen/regionWidth"
+			android:height="100dp"
+			android:textSize="30dp"
+			android:id="@+id/buttonTombali"/>
+	</GridLayout>
+
+</RelativeLayout>

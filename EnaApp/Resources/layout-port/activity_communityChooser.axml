@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
 	android:gravity="center"
-    android:layout_height="match_parent"
-	android:background="@drawable/led_logo_land"
-	>
-	
+	android:background="@drawable/led_logo_footer_p"
+    android:layout_height="match_parent">
+
 	<ImageView
 		style="@style/LEDLogoStyle"
 		android:layout_above="@+id/textView1"
@@ -19,12 +18,11 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/textView1"
 		android:textStyle="bold"
-		android:textSize="90dp"
+		android:textSize="80dp"
 		android:layout_centerInParent="true"
-		android:textColor="@color/ledPrimary" />
+		android:textColor="@color/material_blue_grey_800" />
 
 	<Spinner
-		android:background="@android:color/white"
 		android:id="@+id/spinner1"
 		android:layout_width="374.0dp"
 		android:entries="@array/array_name"
@@ -45,7 +43,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="39.0dp"
-		android:textSize="30dp"
+		android:textSize="30sp"
 	/>
 
 </RelativeLayout>

@@ -13,7 +13,7 @@ using System.Collections.Generic;
 
 namespace EnaApp
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, Icon = "@drawable/ledlogo")]
     public class MainActivity : AppCompatActivity
     {
         public readonly List<Region> RegionList;
@@ -66,6 +66,7 @@ namespace EnaApp
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
             FindViewById<Button>(Resource.Id.buttonBafata).Click += ButtonRegionClickHandler;
             FindViewById<Button>(Resource.Id.buttonBiombo).Click += ButtonRegionClickHandler;
             FindViewById<Button>(Resource.Id.buttonBolama).Click += ButtonRegionClickHandler;

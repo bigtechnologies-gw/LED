@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:id="@+id/relativeLayoutParent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:gravity="center"
+    android:background="@drawable/led_logo_land"
+    android:id="@+id/relativeLayoutSectorParent"
 	>
-	<TextView
-		android:text="Select sector"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/textViewSelectSector"
-		android:layout_centerHorizontal="true"
-		android:layout_above="@+id/gridLayoutSectors"
-		android:textSize="35dp"
-		android:gravity="center"
-		android:textAllCaps="true"
-		android:textStyle="bold|normal" 
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageViewSector"
+        style="@style/LEDLogoStyle"
 	/>
-	<GridLayout
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/gridLayoutSectors"
-		android:columnCount="4"
-		android:useDefaultMargins="true"
-		android:orientation="horizontal"
-		android:rowOrderPreserved="true"
-		android:layout_margin="20dp"
-		android:layout_centerInParent="true" />
+
+    <TextView
+        android:text="SELECT SECTOR"
+        android:layout_below="@+id/imageViewSector"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSelectSector"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/ledPrimary"
+        android:layout_marginTop="18.0dp" 
+	/>
+
+    <GridLayout
+        style="@style/DefaultGrid"
+        android:layout_below="@id/textViewSelectSector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayoutSectors">
+    </GridLayout>
+
 
 </RelativeLayout>
