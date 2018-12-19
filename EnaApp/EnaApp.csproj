@@ -63,6 +63,10 @@
     <Compile Include="CommunityContentFragment.cs" />
     <Compile Include="Entities\Region.cs" />
     <Compile Include="Entities\Sector.cs" />
+    <Compile Include="FragmentHandlers\EthnicFragHandler.cs" />
+    <Compile Include="FragmentHandlers\HistoricalDescriptionFragHandler.cs" />
+    <Compile Include="FragmentHandlers\MeetingPoint.cs" />
+    <Compile Include="FragmentHandlers\LocalicationFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="CommunityActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -119,11 +123,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_community.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\customborder.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -159,7 +158,30 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\mainlayout.axml">
+    <AndroidResource Include="Resources\layout\mytextViewLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\localization.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\meetingpoint.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\historical_description.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\values.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ethnic_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

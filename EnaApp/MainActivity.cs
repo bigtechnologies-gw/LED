@@ -1,5 +1,4 @@
-﻿using Android;
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
@@ -58,6 +57,11 @@ namespace EnaApp
                     "Bedanda", "Cacine", "Catio", "Quebo", "Komo"
                 }),
             };
+
+            // NOTE: Logo color names
+            // green: 74c55f
+            // blue: 2596a6
+            // blue marin: 004773
         }
 
         protected override void OnCreate(Bundle savedInstanceState)

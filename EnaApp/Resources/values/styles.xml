@@ -2,11 +2,11 @@
   <!-- Base application theme. -->
   <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     <!-- Customize your theme here. -->
-    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimary">@color/ledPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
   </style>
-  
+
   <style name="LedAppStyle">
     <item name="android:textSize">35sp</item>
     <item name="android:textColor">@color/ledPrimary</item>
@@ -45,5 +45,5 @@
     <item name="android:rowOrderPreserved">true</item>
     <item name="android:columnOrderPreserved">true</item>
   </style>
-  
+
 </resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	>
+
+	<TextView
+		android:text="Distance in km, from community to section headquarter:"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textView1" />
+
+	<android.support.design.widget.TextInputEditText
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:minWidth="233.0dp"
+		android:layout_width= "wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/textView1"
+		android:id="@+id/textInputEditText1"
+		android:inputType="number" />
+
+	<TextView
+		android:layout_below="@id/textInputEditText1"
+		android:text="Distance in km, from community to sector headquarter:"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textView2" />
+
+	<android.support.design.widget.TextInputEditText
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:minWidth="233.0dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/textInputEditText2"
+		android:layout_below="@id/textView2"
+		android:inputType="number" />
+
+	<TextView
+		android:layout_below="@id/textInputEditText2"
+		android:text="Distance in km, from community to region headquarter:"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textView3" />
+
+	<android.support.design.widget.TextInputEditText
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:minWidth="233.0dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/textInputEditText3"
+		android:layout_below="@id/textView3"
+		android:inputType="number" />
+
+	<TextView
+		android:layout_below="@id/textInputEditText3"
+		android:text="Distance in km, from community to Bissau headquarter:"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/textView4" />
+
+	<android.support.design.widget.TextInputEditText
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:minWidth="233.0dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/textInputEditText4"
+		android:layout_below="@id/textView4"
+		android:inputType="number" />
+	<TextView
+		android:text="kilometers"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/textInputEditText1"
+		android:layout_below="@id/textView1"
+		android:id="@+id/textView5"
+		android:layout_marginTop="22.5dp"
+		android:layout_marginLeft="15.0dp" />
+
+</RelativeLayout>

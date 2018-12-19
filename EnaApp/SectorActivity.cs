@@ -12,7 +12,7 @@ namespace EnaApp
     [Activity(Label = "SectorActivity")]
     public class SectorActivity : Activity
     {
-
+        // TODO: Add the remaining sectors.
         private readonly Dictionary<string, List<string>> _regionMap = new Dictionary<string, List<string>>
         {
             {"bafata",  new List<string> {"Bafata", "Bambadinca", "Cuntuboel","Galomaro", "Gamamundo", "Xitole"}},
@@ -24,8 +24,9 @@ namespace EnaApp
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_sector);
 
-            var relativeLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutSectorParent);
-            var gridLayout = relativeLayout.FindViewById<GridLayout>(Resource.Id.gridLayoutSectors);
+            RelativeLayout relativeLayout = FindViewById<RelativeLayout>(Resource.Id.relativeLayoutSectorParent);
+            GridLayout gridLayout = relativeLayout.FindViewById<GridLayout>(Resource.Id.gridLayoutSectors);
+
             // already defined in design-mode
             //gridLayout.ColumnCount = 4;
 
@@ -39,12 +40,11 @@ namespace EnaApp
 
             string region = Intent.GetStringExtra("Region");
 
-            List<string> result;
             // todo: string needs to be normalize before checking in map (e.g: bafata has accent accute)
 
-            if (region == null || _regionMap.TryGetValue(region, out result) == false)
+            if (region == null || _regionMap.TryGetValue(region, out List<string> result) == false)
             {
-                var builder = new AlertDialog.Builder(this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.SetTitle("Error selection region!");
                 builder.SetMessage("Region not found!");
                 builder.Show();
@@ -52,23 +52,23 @@ namespace EnaApp
             }
 
             // start choose-communit intent
-            var intent = new Intent(this, typeof(CommunityContentFragment));
+            Intent intent = new Intent(this, typeof(ChooseCommunity));
 
             // computed width
-            var computedWidth = (Resources.DisplayMetrics.WidthPixels / 4) - (2 * ((MarginLayoutParams)gridLayout.LayoutParameters).RightMargin);
+            int computedWidth = (Resources.DisplayMetrics.WidthPixels / 4) - (2 * ((MarginLayoutParams)gridLayout.LayoutParameters).RightMargin);
 
             // convert int to dp
             // https://stackoverflow.com/questions/40819194/how-to-convert-dp-to-px-in-xamarin-android
             //var dp = 100;
             //int pixel = (int)TypedValue.ApplyDimension(ComplexUnitType.Dip, dp, );
-            foreach (var sector in result)
+            foreach (string sector in result)
             {
                 //var button = new Button(this)// , Android.Runtime.JniHandleOwnership)
                 //{
                 //    Text = sector,
                 //};
 
-                var buttonWithStyle = new Button(new ContextThemeWrapper(this, Resource.Style.LEDButtonStyle))
+                Button buttonWithStyle = new Button(new ContextThemeWrapper(this, Resource.Style.LEDButtonStyle))
                 {
                     Text = sector
                 };
@@ -87,10 +87,10 @@ namespace EnaApp
 
                     StartActivity(intent);
                 };
-                
+
                 // NOTE: There is a layout gravity set in style in order to fix button gravity
                 // that is very inportant.
-                
+
                 //gridLayout.AddView(button, 0, ViewGroup.LayoutParams.FillParent);
                 gridLayout.AddView(buttonWithStyle);
                 //this.AddContentView(button, Viewgou)

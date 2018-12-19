@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:text="Nome do fundador:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:textSize="23sp"
+            android:minHeight="25px"
+            android:id="@+id/textView1"
+            android:layout_marginLeft="10dp"
+            />
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:layout_margin="10dp"
+            android:layout_marginTop="0.0dp" 
+             />
+
+        <TextView
+            android:textSize="23sp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:text="Período de fundação da Tabanca Principal em (Ano)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+
+        <RadioGroup
+            android:layout_margin="10dp"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup1">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Antes da colonização "
+                android:id="@+id/radioButton1" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Durante a colonização"
+                android:id="@+id/radioButton2" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Depois da colonização"
+                android:id="@+id/radioButton3" />
+
+        </RadioGroup>
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="10dp"
+            android:textSize="23sp"
+            android:text="Tabanca de origem:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" />
+
+        <Spinner
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:id="@+id/spinner1"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textSize="23sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:text="Etnia de fundador: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4" />
+
+        <Spinner
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:id="@+id/spinner2"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="23sp"
+            android:layout_marginLeft="10dp"
+            android:text="Razão de fundação:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5" />
+
+        <GridLayout
+            style="@style/DefaultGrid"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridLayout1"
+            android:layout_margin="9dp">
+
+            <CheckBox
+                android:text="Agricultura "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox1" />
+
+            <CheckBox
+                android:text="Caça"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox2" />
+
+            <CheckBox
+                android:text="Pesca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3" />
+
+            <CheckBox
+                android:text="Pecuária  "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox4" />
+
+            <CheckBox
+                android:text="Segurança  "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox5" />
+            <CheckBox
+                android:text="Outros "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox6" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:enabled="false"
+                android:id="@+id/editText1"
+                android:minWidth="150dp" />
+
+        </GridLayout>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="23sp"
+            android:text="A comunidade sofreu no passado com algum dos seguintes problemas?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" />
+
+        <GridLayout
+            android:layout_margin="9dp"
+            android:background="@drawable/customborder"
+            android:columnCount="4"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridLayout2">
+
+            <CheckBox
+                android:text="Ventos fortes"
+                android:id="@+id/checkBox7" />
+
+            <CheckBox
+                android:text="Inundação"
+                android:id="@+id/checkBox8" />
+
+            <CheckBox
+                android:text="Surto de doenças"
+                android:id="@+id/checkBox9" />
+
+            <CheckBox
+                android:text="Surto de pragas"
+                android:id="@+id/checkBox10" />
+
+            <CheckBox
+                android:text="Incêndios     "
+                android:id="@+id/checkBox11" />
+
+            <CheckBox
+                android:text="Seca"
+                android:id="@+id/checkBox12" />
+
+            <CheckBox
+                android:text="Insegurança"
+                android:id="@+id/checkBox13" />
+
+            <CheckBox
+                android:text="Conflito armado"
+                android:id="@+id/checkBox14" />
+
+            <CheckBox
+                android:text="Falta de alimentos"
+                android:id="@+id/checkBox16" />
+
+            <CheckBox
+                android:text="Falta de água"
+                android:id="@+id/checkBox17" />
+
+            <CheckBox
+                android:text="Falta de Transporte público"
+                android:id="@+id/checkBox18" />
+
+        </GridLayout>
+
+        <TextView
+            android:textSize="23sp"
+            android:layout_marginLeft="10dp"
+            android:text="A comunidade sofre atualmente com algum desses problemas?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:textColor="#ff000000" />
+
+        <GridLayout
+            android:layout_margin="9dp"
+            style="@style/DefaultGrid"
+            android:columnCount="4"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridLayout2"
+            >
+
+            <CheckBox
+                android:text="Ventos fortes"
+                android:id="@+id/checkBox7" />
+
+            <CheckBox
+                android:text="Inundação"
+                android:id="@+id/checkBox8" />
+
+            <CheckBox
+                android:text="Surto de doenças"
+                android:id="@+id/checkBox9" />
+
+            <CheckBox
+                android:text="Surto de pragas"
+                android:id="@+id/checkBox10" />
+
+            <CheckBox
+                android:text="Incêndios"
+                android:id="@+id/checkBox11" />
+
+            <CheckBox
+                android:text="Seca"
+                android:id="@+id/checkBox12" />
+
+            <CheckBox
+                android:text="Insegurança"
+                android:id="@+id/checkBox13" />
+
+            <CheckBox
+                android:text="Conflito armado"
+                android:id="@+id/checkBox14" />
+
+            <CheckBox
+                android:text="Falta de alimentos"
+                android:id="@+id/checkBox16" />
+
+            <CheckBox
+                android:text="Falta de água"
+                android:id="@+id/checkBox17" />
+
+            <CheckBox
+                android:text="Falta de Transporte público"
+                android:id="@+id/checkBox18" />
+
+        </GridLayout>
+
+
+        <GridLayout 
+            android:layout_margin="9dp"
+            style="@style/DefaultGrid"
+            android:columnCount="4"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridLayoutMainEthnic">
+
+        </GridLayout>
+    </LinearLayout>
+
+</ScrollView>
