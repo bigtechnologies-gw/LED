@@ -3,7 +3,6 @@ using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
-using EnaApp.Entities;
 using System;
 using System.Collections.Generic;
 //using static Android.Manifest;
@@ -15,13 +14,16 @@ namespace EnaApp
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, Icon = "@drawable/ledlogo")]
     public class MainActivity : AppCompatActivity
     {
-        public readonly List<Region> RegionList;
+        public static AppContext AppContext { get; set; }
+
+        //public readonly List<Region> RegionList;
 
         public MainActivity()
         {
             // https://www.viralandroid.com/2016/04/android-gridview-with-image-and-text.html
             //***this.LayoutInflater.Context.GetSystemService(Context.LayoutInflaterService);
 
+            /*
             RegionList = new List<Region>()
             {
                 new Region("Bafata", new List<string>
@@ -54,9 +56,11 @@ namespace EnaApp
                 }),
                 new Region("Tombali", new List<string>
                 {
-                    "Bedanda", "Cacine", "Catio", "Quebo", "Komo"
+                    "Bedanda", "Cacine", "Catió", "Quebo", "Komo"
                 }),
             };
+            */
+            AppContext = new AppContext();
 
             // NOTE: Logo color names
             // green: 74c55f
@@ -104,6 +108,8 @@ namespace EnaApp
         {
             Button clickedButton = (Button)obj;
             var intent = new Intent(this, typeof(SectorActivity));
+            string region = (string)clickedButton.Tag;
+            AppContext.Region = region;
             intent.PutExtra("Region", (string)clickedButton.Tag);
             StartActivity(intent);
             //Window.AddFlags(Android.Views.WindowManagerFlags.AllowLockWhileScreenOn);

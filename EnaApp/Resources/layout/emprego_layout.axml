@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView1">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="A Comunidade/Localidade tem Pessoal Disponível para Trabalho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/textView1" />
+
+        <LinearLayout
+            android:background="@drawable/customborder"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup1">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Sim"
+                    android:id="@+id/radioButton1" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:id="@+id/radioButton2" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vai ter"
+                    android:id="@+id/radioButton3" />
+            </RadioGroup>
+
+            <TextView
+                android:text="Em que actividade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner1" />
+            <TextView
+                android:text="Preencher a quatidade por sexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3" />
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup2">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Masculino"
+                    android:id="@+id/radioButton4" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feminino"
+                    android:id="@+id/radioButton5" />
+            </RadioGroup>
+            <TextView
+                android:tag="***(this field is not required)***"
+                android:visibility="gone"
+                android:text="Total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4" />
+            <android.support.design.widget.TextInputEditText
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textInputEditText1" />
+            <Button
+                android:text="Adicionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Divisão de atividades por sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5" />
+
+        <LinearLayout
+            android:background="@drawable/customborder"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:text="Atividades agrícolas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2" />
+
+            <GridLayout
+                android:layout_marginTop="5dp"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gridLayout1">
+                <CheckBox
+                    android:text="Masculino"
+                    android:id="@+id/checkBox4" />
+                <CheckBox
+                    android:text="Femenino"
+                    android:id="@+id/checkBox3" />
+                <CheckBox
+                    android:text="Crianças M"
+                    android:id="@+id/checkBox2" />
+                <CheckBox
+                    android:text="Crianças F"
+                    android:id="@+id/checkBox1" />
+            </GridLayout>
+            <Button
+                android:text="Adicionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button2" />
+        </LinearLayout>
+
+        <TextView
+            android:text="Outras atividades produtivas e sociais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7" />
+
+        <LinearLayout
+            android:background="@drawable/customborder"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:text="Atividades agrícolas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2" />
+
+            <GridLayout
+                android:layout_marginTop="5dp"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gridLayout1">
+                <CheckBox
+                    android:text="Masculino"
+                    android:id="@+id/checkBox4" />
+                <CheckBox
+                    android:text="Femenino"
+                    android:id="@+id/checkBox3" />
+                <CheckBox
+                    android:text="Crianças M"
+                    android:id="@+id/checkBox2" />
+                <CheckBox
+                    android:text="Crianças F"
+                    android:id="@+id/checkBox1" />
+            </GridLayout>
+            <Button
+                android:text="Adicionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView1">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:text="Principais Atividades Económicas da Comunidade, (numerar por ordem da Importância)"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/textView1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Agricultura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:entries="@array/agricultura_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Horticultura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:entries="@array/hoticultura_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Arboricultura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Repovoamento Florestal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Apicultura em espécie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Pescas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Exploração Florestal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Exploração Florestal (Animal)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Exploração Florestal (Lenhoso)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewForestActivityLenhoso" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerForestActivityLenhoso" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditTextForestActivityLenhoso"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonForestActivityLenhoso" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Exploração Florestal (Vegetal)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerForestActivity" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditTextForestActivity"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAddForestActivity" />
+
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:text="Outras Actividades Económicas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewIOtherActivity" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerOtherActivity" />
+        <android.support.design.widget.TextInputEditText
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditTextOtherActivity"
+            android:inputType="none|number" />
+        <Button
+            android:text="Adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAddOtherActivity" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -17,6 +17,7 @@ namespace EnaApp
         {
             {"bafata",  new List<string> {"Bafata", "Bambadinca", "Cuntuboel","Galomaro", "Gamamundo", "Xitole"}},
             {"biombo",  new List<string> {  "Prabis", "Quinhamel", "Safim"}},
+            {"cacheu", new List<string> {"Bigene", "Bula", "Cacheu", "Caio", "Canchungo", "Sao Domingos"} }
         };
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -52,7 +53,7 @@ namespace EnaApp
             }
 
             // start choose-communit intent
-            Intent intent = new Intent(this, typeof(ChooseCommunity));
+            Intent intent = new Intent(this, typeof(MainEntityActivity));
 
             // computed width
             int computedWidth = (Resources.DisplayMetrics.WidthPixels / 4) - (2 * ((MarginLayoutParams)gridLayout.LayoutParameters).RightMargin);
@@ -84,7 +85,7 @@ namespace EnaApp
                 buttonWithStyle.Click += (sender, e) =>
                 {
                     //StartActivity(intent);
-
+                    MainActivity.AppContext.Sector = buttonWithStyle.Text;
                     StartActivity(intent);
                 };
 

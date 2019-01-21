@@ -15,8 +15,16 @@
 		android:id="@+id/imageView1"
 	/>
 
+    <ImageView
+        android:layout_marginBottom="550dp"
+        android:layout_toRightOf="@id/imageView1"
+        android:src="@drawable/flag_map_led"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2" />
+
     <TextView
-        android:text="SELECT REGION"
+        android:text="SELECIONAR REGIÃO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50dip"
@@ -24,7 +32,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/textView1"
         android:textStyle="bold"
-		android:textColor="@color/ledPrimary"
+        android:textColor="@color/ledPrimary"
 	/>
 	<GridLayout
         style="@style/DefaultGrid"
@@ -36,17 +44,20 @@
 		android:id="@+id/gridLayout1"
 		>
 		<Button
+            android:enabled="false"
 			style="@style/LEDButtonStyle"
 			android:text="Bafatá"
 			android:id="@+id/buttonBafata"
 			android:tag="bafata"
 		/>
 		<Button
+            android:enabled="false"
 			style="@style/LEDButtonStyle"
 			android:text="Biombo"
 			android:tag="biombo"
 			android:id="@+id/buttonBiombo" />
 		<Button
+            android:enabled="false"
 			style="@style/LEDButtonStyle"
 			android:text="Bolama"
 			android:tag="bolama"
@@ -57,21 +68,25 @@
 			android:tag="cacheu"
 			android:id="@+id/buttonCacheu" />
 		<Button
+            android:enabled="false"
 			style="@style/LEDButtonStyle"
 			android:text="Gabu"
 			android:tag="gabu"
 			android:id="@+id/buttonGabu" />
 		<Button
+            android:enabled="false"
 			style="@style/LEDButtonStyle"
 			android:text="Oio"
 			android:tag="oio"
 			android:id="@+id/buttonOio" />
 		<Button
+            android:enabled="false"
 			style="@style/LEDButtonStyle"
 			android:text="Quinara"
 			android:tag="quinara"
 			android:id="@+id/buttonQuinara" />
 		<Button
+            android:enabled="false"
 			style="@style/LEDButtonStyle"
 			android:text="Tombali"
 			android:tag="Tombali"

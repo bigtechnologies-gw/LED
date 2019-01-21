@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace EnaApp.FragmentHandlers
 {
-    public class EthnicFragHandler : Fragment
+    public class CommunityAccessFragHandler : Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,11 +25,8 @@ namespace EnaApp.FragmentHandlers
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
+            return inflater.Inflate(Resource.Layout.access_to_tabanca_layout, container, false);
 
-
-            return inflater.Inflate(Resource.Layout.ethnic_layout, container, false);
-            //return base.OnCreateView(inflater, container, savedInstanceState);
         }
     }
 }

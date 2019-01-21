@@ -6,16 +6,27 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:background="@drawable/led_logo_footer_p"
-	android:gravity="center"
 	android:minWidth="25px"
 	android:minHeight="25px">
+
 	<ImageView
 		style="@style/LEDLogoStyle"
 		android:layout_marginBottom="25dip"
 		android:layout_above="@+id/textView1"
-		android:id="@+id/imageView1" />
+		android:id="@+id/imageView1"/>
+
+	<ImageView
+		android:layout_toRightOf="@+id/imageView1"
+		android:layout_marginRight="10dp"
+		android:layout_above="@+id/gridLayout1"
+		android:src="@drawable/flag_map_led"
+		android:layout_width="150dp"
+		android:layout_height="wrap_content"
+		android:id="@+id/imageViewGbflag"
+	/>
+
 	<TextView
-		android:text="SELECT REGION"
+		android:text="SELECIONAR REGIÃO"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textSize="50dip"
@@ -38,6 +49,7 @@
 		android:orientation="horizontal"
 		>
 		<Button
+            android:enabled="false"
 			android:text="Bafatá"
 			android:width="@dimen/regionWidth"
 			android:height="100dp"
@@ -46,6 +58,7 @@
 			android:tag="bafata"
 		/>
 		<Button
+            android:enabled="false"
 			android:text="Biombo"
 			android:width="@dimen/regionWidth"
 			android:height="100dp"
@@ -54,6 +67,7 @@
 			android:id="@+id/buttonBiombo" />
 		<Button
 			android:text="Bolama"
+            android:enabled="false"
 			android:tag="bolama"
 			android:width="@dimen/regionWidth"
 			android:height="100dp"
@@ -67,6 +81,7 @@
 			android:textSize="30dp"
 			android:id="@+id/buttonCacheu" />
 		<Button
+            android:enabled="false"
 			android:text="Gabu"
 			android:tag="gabu"
 			android:width="@dimen/regionWidth"
@@ -74,6 +89,7 @@
 			android:textSize="30dp"
 			android:id="@+id/buttonGabu" />
 		<Button
+            android:enabled="false"
 			android:text="Oio"
 			android:tag="oio"
 			android:width="@dimen/regionWidth"
@@ -81,6 +97,7 @@
 			android:textSize="30dp"
 			android:id="@+id/buttonOio" />
 		<Button
+            android:enabled="false"
 			android:text="Quinara"
 			android:tag="quinara"
 			android:width="@dimen/regionWidth"
@@ -89,6 +106,7 @@
 			android:id="@+id/buttonQuinara" />
 		<Button
 			android:text="Tombali"
+            android:enabled="false"
 			android:tag="Tombali"
 			android:width="@dimen/regionWidth"
 			android:height="100dp"

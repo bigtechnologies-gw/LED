@@ -1,20 +1,29 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 using Android.App;
+using Android.Content;
+using Android.Graphics;
 using Android.OS;
+using Android.Runtime;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 
 namespace EnaApp
 {
-    public class CommunityContentFragment : ListFragment
+    public class CreateTabancaListFragment : ListFragment
     {
+        private View _preSelView;
+        private Color _defaultBackGround;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
-
-
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
@@ -25,21 +34,33 @@ namespace EnaApp
             ListAdapter = new ArrayAdapter<string>(Activity, Android.Resource.Layout.SimpleListItemActivated1,
                 new[] {
                     "Home",
-                    "Ponto de União",
-                    "DESCRIÇÃO HISTORIAL DA COMUNIDADE",
-                    "Economic",
-                    "Base association/ONGs 2018",
-                    "Ponters/Pointeiros",
-                    "Types of housing construction predominant",
-                    "Building construction"
+                    "Ponto de união",
+                    "Descrição historial da tabanca",
+                    "Governação local",
+                    "Actividades económicas da tabanca",
+                    "Economia",
+                    "Ponteiros",
+                    "Emprego",
+                    "Serviços básicos (Água, energia e saneamento)",
+                    "Acesso a comunidade",
+                    "Comunicação",
+                    "Concluir"
                 });
         }
 
-        Android.Graphics.Color _defaultBackGround;
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        {
+            // Use this to return your custom view for this Fragment
+            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
 
-        View _preSelView = null;
+            return base.OnCreateView(inflater, container, savedInstanceState);
+        }
+
+
         public override void OnListItemClick(ListView l, View v, int position, long id)
         {
+            base.OnListItemClick(l, v, position, id);
+
             base.OnListItemClick(l, v, position, id);
 
             //v.SetBackgroundColor(Color.Blue);
@@ -65,26 +86,49 @@ namespace EnaApp
             switch (position)
             {
                 case 0:
-                    var localizationFragment = new LocalicationFragment();
                     // replace whatever content that is inside framelayout with the fragment content.
-                    transaction.Replace(Resource.Id.frameLayout1, localizationFragment);
+                    transaction.Replace(Resource.Id.frameLayout1, new LocalicationFragment());
                     break;
+
                 case 1:
                     var meetingPoint = new FragmentHandlers.MeetingPoint();
                     // replace whatever content that is inside framelayout with the fragment content.
                     transaction.Replace(Resource.Id.frameLayout1, meetingPoint);
                     break;
+
                 case 2:
                     // replace whatever content that is inside framelayout with the fragment content.
                     transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.HistoricalDescriptionFragHandler());
                     break;
+
                 case 3:
+                    // replace whatever content that is inside framelayout with the fragment content.
+                    transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.LocalGovFragHandler());
                     break;
+
                 case 4:
+                    transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.EconomicActivityFragHandler());
                     break;
+
                 case 5:
+                    transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.EconomicFragHandler());
                     break;
+
                 case 6:
+                    transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.PonteirosFragHandler());
+                    break;
+
+                case 7:
+                    transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.EmpregoFragHandler());
+                    break;
+                case 8:
+                    transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.ServicosBasicosFragHandler());
+                    break;
+                case 9:
+                    transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.CommunityAccessFragHandler());
+                    break;
+                case 10:
+                    transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.CommunicationFragHandler());
                     break;
             }
 
@@ -95,18 +139,6 @@ namespace EnaApp
 
             _preSelView = v;
 
-        }
-
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-
-            //var listContent = new ArrayAdapter<string>(Activity, Resource.Layout.simple)
-
-            return base.OnCreateView(inflater, container, savedInstanceState);
-
-            //return inflater.Inflate(Resource.Layout.mainlayout, container, false);
         }
 
         public override void OnViewCreated(View view, Bundle savedInstanceState)

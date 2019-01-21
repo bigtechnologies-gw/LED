@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView1">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:text="A quais os serviços públicos a tabanca tem acesso?"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+        <GridLayout
+            android:background="@drawable/customborder"
+            android:columnCount="4"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridLayout1">
+            <CheckBox
+                android:text="Educação"
+                android:id="@+id/checkBox7" />
+            <CheckBox
+                android:text="Saúde"
+                android:id="@+id/checkBox6" />
+            <CheckBox
+                android:text="Energia"
+                android:id="@+id/checkBox5" />
+            <CheckBox
+                android:text="Agricultura"
+                android:id="@+id/checkBox4" />
+            <CheckBox
+                android:text="Obras Públicas"
+                android:id="@+id/checkBox3" />
+            <CheckBox
+                android:text="Pescas"
+                android:id="@+id/checkBox2" />
+            <CheckBox
+                android:text="Outros"
+                android:id="@+id/checkBox1" />
+        </GridLayout>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:text="Como você avalia os serviços prestados?"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+        <RadioGroup
+            android:background="@drawable/customborder"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup1"
+            android:checkedButton="@android:id/button2"
+        >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Ótimo"
+                android:id="@+id/radioButton1" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bom"
+                android:id="@+id/radioButton2" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular"
+                android:id="@+id/radioButton3" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mau"
+                android:id="@+id/radioButton4" />
+        </RadioGroup>
+
+        <TextView
+            android:text="Como você avalia a cooperação e coordenação entre os Departamentos de Estado e os Atores locais, como o governo local, o poder tradicional, a sociedade civil, o sector privado e outros?"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" />
+        <GridLayout
+            android:background="@drawable/customborder"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridLayout2">
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/radioGroup2">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="A relação é forte"
+                    android:id="@+id/radioButton5" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No geral é boa"
+                    android:id="@+id/radioButton6" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não é muito boa"
+                    android:id="@+id/radioButton7" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inexistente"
+                    android:id="@+id/radioButton8" />
+            </RadioGroup>
+        </GridLayout>
+        <TextView
+            android:text="Os departamentos de Estado garantem equilíbrio de género no processo de tomada de decisões?"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4" />
+
+        <RadioGroup
+            android:background="@drawable/customborder"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup3">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Sim"
+                android:id="@+id/radioButton9" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nem smpre"
+                android:id="@+id/radioButton10" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não"
+                android:id="@+id/radioButton11" />
+        </RadioGroup>
+
+    </LinearLayout>
+</ScrollView>

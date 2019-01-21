@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/led_logo_land"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/linearLayoutCreateCommunity"
+    android:foregroundGravity="center">
+
+    <TextView
+        android:background="@color/ledPrimary"
+        android:text="Criar comunidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCreateCommunity"
+        android:textColor="@android:color/white"
+        android:foregroundGravity="center"
+        android:textSize="70sp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/customborder"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+
+        <TextView
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textViewCreateCommunity"
+            android:text="Nome de comunidade"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_width="366.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInputEditText1" />
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:text="Selecionar tabancas que fazem\nparte desta comunidade"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <Spinner
+                android:entries="@array/list_tabancas_data"
+                android:layout_width="288.0dp"
+                android:layout_height="58.0dp"
+                android:id="@+id/spinner1"
+                android:layout_marginLeft="233.5dp"
+                android:layout_marginRight="0.0dp" />
+            <CheckBox
+                android:text="Marcar como tabanca principal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox1" />
+        </LinearLayout>
+
+        <Button
+            android:layout_centerHorizontal="true"
+            android:text="Adicionar tabanca"
+            android:textSize="20sp"
+            android:layout_width="331.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAddTabancaToCommunity" />
+        <Button
+            android:textSize="36sp"
+            android:text="Criar comunidade"
+            android:layout_width="469.5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonDoneCreateCommunity" />
+    </LinearLayout>
+
+</LinearLayout>
