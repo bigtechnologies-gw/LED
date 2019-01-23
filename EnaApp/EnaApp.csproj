@@ -61,7 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Configs.cs" />
+    <Compile Include="Helpers\StringUtils.cs" />
     <Compile Include="Helpers\Utils.cs" />
+    <Compile Include="Helpers\XmlUtils.cs" />
     <Compile Include="Models\AppContext.cs" />
     <Compile Include="FragmentHandlers\CommunityEcoFragHandler.cs" />
     <Compile Include="FragmentHandlers\CommunicationFragHandler.cs" />

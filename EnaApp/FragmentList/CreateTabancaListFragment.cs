@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 using Android.App;
-using Android.Content;
 using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
+using EnaApp.Helpers;
+using System.Threading.Tasks;
 
 namespace EnaApp
 {
@@ -74,13 +69,9 @@ namespace EnaApp
             // reset the background color
             if (_preSelView != v)
                 _preSelView?.SetBackgroundColor(_defaultBackGround); // reset predefined color.
-
             v.SetBackgroundColor(Android.Graphics.Color.ParseColor("#74c55f"));
-
             // TODO: have a builder class that will return us a fragmetn basing on the selOption
-
             var transaction = FragmentManager.BeginTransaction();
-
             //transaction.Replace(Resource.Id.KDWfra)
 
             switch (position)
@@ -130,6 +121,37 @@ namespace EnaApp
                 case 10:
                     transaction.Replace(Resource.Id.frameLayout1, new FragmentHandlers.CommunicationFragHandler());
                     break;
+                case 11:
+
+                    var dialogBuilder = new AlertDialog.Builder(Activity, Android.Resource.Style.ThemeMaterialDialogAlert);
+                    dialogBuilder.SetTitle("Tabanca criada!");
+                    dialogBuilder.SetMessage("Tabanca foi criada com sucesso");
+
+                    // TODO: Main activity has to implement 
+                    //dialogBuilder.SetPositiveButton(Android.Resource.String.Yes, Activity);
+                    //dialogBuilder.SetNegativeButton(Android.Resource.String.No, Activity);
+
+                    dialogBuilder.SetIcon(Android.Resource.Drawable.IcDialogInfo);
+                    dialogBuilder.Show();
+
+                    var xRootSector = XmlUtils.GetRootSector();
+                    xRootSector.Element("Tabancas").Add(CreateTabancaActivity.NewTabanca.ToXElement());
+
+                    // NOTE: ahaha...
+                    //xRootSector.Save(Configs.DataFile);
+
+                    XmlUtils.Save();
+
+
+                    // save all data and close this Activity
+                    //Activity.OnBackPressed();
+
+                    //Thread.Sleep(1000 * 3);
+                    Task.Delay(1000 * 3).ContinueWith(t =>
+                    {
+                        Activity.Finish();
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
+                    break;
             }
 
 
@@ -144,18 +166,21 @@ namespace EnaApp
         public override void OnViewCreated(View view, Bundle savedInstanceState)
         {
             base.OnViewCreated(view, savedInstanceState);
+
             var defaultListBackgroundColor = Android.Graphics.Color.Rgb(37, 150, 166);
 
             ListView.SetBackgroundColor(defaultListBackgroundColor);
             _defaultBackGround = defaultListBackgroundColor;
 
 
-            // TODO: Make sure correct item is selected from listview.
-
-
             var transaction = FragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.frameLayout1, new LocalicationFragment());
             transaction.Commit();
+
+            //TODO: Make sure correct item is selected from listview.
+            //ListView.PerformItemClick(null, 0, 0);
+            //ListView.SetSelection(0);
         }
+
     }
 }

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Regions>
+  <Region>
+    <Name>Cacheu</Name>
+    <Sectors>
+      <Communities>
+        <Name></Name>
+        <Tabancas>
+          <TabancaID>1</TabancaID>
+          <TabancaID>2</TabancaID>
+          <TabancaID>3</TabancaID>
+        </Tabancas>
+      </Communities>
+      <Tabancas>
+        <Tabanca>
+          <ID>1</ID>
+          <Name></Name>
+        </Tabanca>
+        <Tabanca>
+          <ID>1</ID>
+          <Name></Name>
+        </Tabanca>
+        <Tabanca>
+          <ID>1</ID>
+          <Name></Name>
+        </Tabanca>
+        <Tabanca>
+          <ID>1</ID>
+          <Name></Name>
+        </Tabanca>
+      </Tabancas>
+    </Sectors>
+  </Region>
+
+</Regions>

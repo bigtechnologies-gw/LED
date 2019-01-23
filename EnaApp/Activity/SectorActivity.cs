@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using EnaApp.Helpers;
 using System.Collections.Generic;
 using static Android.Views.ViewGroup;
 
@@ -84,8 +85,8 @@ namespace EnaApp
                 //buttonWithStyle.LayoutParameters = new LayoutParams(computedWidth, ViewGroup.LayoutParams.WrapContent);
                 buttonWithStyle.Click += (sender, e) =>
                 {
-                    //StartActivity(intent);
-                    MainActivity.AppContext.Sector = buttonWithStyle.Text;
+                    MainActivity.AppContext.Sector = StringUtils.CapitalizeFirstLetter(buttonWithStyle.Text);
+                    XmlUtils.Ensure();
                     StartActivity(intent);
                 };
 

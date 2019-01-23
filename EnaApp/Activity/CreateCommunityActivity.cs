@@ -2,8 +2,12 @@
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Android.Support.Design.Widget;
 using Android.Widget;
+using EnaApp.Helpers;
+using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace EnaApp
 {
@@ -61,12 +65,36 @@ namespace EnaApp
             //    inputText.selectall
             //};
 
+            XElement rootSector = XmlUtils.GetRootSector();
+
+            // only filter the tabancas that doesn't belong to a community already
+            IEnumerable<XElement> tabancas = rootSector.Element("Tabancas")?
+                .Elements("Tabanca")?.Where(el => string.IsNullOrEmpty(el.Element("CommunityID")?.Value));
+
+            // TODO: handle when tabancas is null
+
+            IEnumerable<Tabanca> listTabanca = tabancas.Select(el => new Tabanca
+            {
+                ID = el.Element("ID").Value,
+                Name = el.Element("Name").Value,
+            });
+
             Spinner _spinnerTabanca = FindViewById<Spinner>(Resource.Id.spinner1);
             _spinnerTabanca.Adapter = new ArrayAdapter<Tabanca>(this, Android.Resource.Layout.SimpleSpinnerDropDownItem,
-                MainActivity.AppContext.Communities.First().Tabancas);
+               listTabanca.ToList());
 
             FindViewById<Button>(Resource.Id.buttonDoneCreateCommunity).Click += (sender, e) =>
             {
+                string communityName = FindViewById<TextInputEditText>(Resource.Id.textInputEditText1).Text;
+
+                // validate communty name
+                if (string.IsNullOrWhiteSpace(communityName))
+                {
+                    // notify user and return
+
+                }
+
+                // add community to xml file
                 var dialogBuilder = new AlertDialog.Builder(this, Android.Resource.Style.ThemeMaterialDialogAlert);
                 dialogBuilder.SetTitle("Comunidade criada!");
                 dialogBuilder.SetMessage("A comunidade foi criada com sucesso");
@@ -78,6 +106,7 @@ namespace EnaApp
 
             FindViewById<Button>(Resource.Id.buttonAddTabancaToCommunity).Click += (sender, e) =>
             {
+                // get select tabanca and store the it in community
                 MainActivity.AppContext.Communities.First().Tabancas.Add(new Tabanca { Name = "New tabanca" });
 
                 Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1);
@@ -90,8 +119,11 @@ namespace EnaApp
                 dialogBuilder.SetNegativeButton(Android.Resource.String.No, this);
                 dialogBuilder.SetIcon(Android.Resource.Drawable.IcDialogInfo);
                 dialogBuilder.Show();
-                
+
             };
+
         }
+
+
     }
 }

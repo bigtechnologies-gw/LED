@@ -36,6 +36,7 @@ namespace EnaApp
 
         protected override void OnDestroy()
         {
+            base.OnDestroy();
             // save data to file
             // get the data stored in AppContext in order to write/update the root
             // write the "NewTabanca data"

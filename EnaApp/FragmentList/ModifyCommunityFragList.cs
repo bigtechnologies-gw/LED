@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
+using EnaApp.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace EnaApp
 {
@@ -73,7 +71,57 @@ namespace EnaApp
             ListView.SetBackgroundColor(defaultListBackgroundColor);
             _defaultBackGround = defaultListBackgroundColor;
 
+            var parentActivity = (ModifyCommunityActivity)Activity;
+
+            if (Activity == null)
+            {
+
+            }
+            else
+            {
+                var propInfo = parentActivity.GetType().GetProperties().FirstOrDefault(p => p.Name.Equals("CommunityID"));
+                Console.ReadLine();
+            }
+
+            // get community name, tabanca principal
+            // get all tabanca that belong to that community
+
+            var xdocData = XDocument.Load(Configs.DataFile);
+
+            // regions -> region -> sectors -> sector -> 
+            // -> Tabancas -> tabanca
+            // -> Communities -> Community
+
+            var appContext = MainActivity.AppContext;
+
+            // note: XDocument.Root = Regions
+            XElement xElSelSector = xdocData.Root
+                .Elements("Region").First(el => el.Element("Name").Value.Equals(appContext.Region, StringComparison.OrdinalIgnoreCase))
+                .Element("Sectors").Elements("Sector").FirstOrDefault(el => el.Element("Name").Value.Equals(appContext.Sector, StringComparison.OrdinalIgnoreCase));
+
+            // UNDONE: there must be atlest one community for this to work!
+            XElement selCommunity = xElSelSector
+                .Element("Communities")
+                .Elements("Community")
+                .FirstOrDefault(el => el.Element("ID")?.Value.Equals(parentActivity.CommunityID, StringComparison.OrdinalIgnoreCase) == true);
+
+            if (selCommunity == null)
+            {
+                return;
+            }
+
+            // get all the tabancas that belong to current selected community
+            IEnumerable<XElement> communityTabancas = xElSelSector.Element("Tabancas").Elements("Tabanca")
+               .Where(el => el.Element("CommunityID").Value.Equals(parentActivity.CommunityID, StringComparison.OrdinalIgnoreCase));
+
+            List<Tabanca> listTabanca = communityTabancas.Select(el => new Tabanca(el)).ToList();
+
+            // TODO: why Resource.Id.listMode?
+            //var listView = View.FindViewById<ExpandableListView>(Resource.Id.listMode);
+            ListView.Adapter = new ArrayAdapter<Tabanca>(Activity, Android.Resource.Layout.SimpleListItem1, listTabanca);
+
         }
+
 
         public void OnClick(IDialogInterface dialog, int which)
         {
