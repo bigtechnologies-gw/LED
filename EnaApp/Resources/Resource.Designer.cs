@@ -2418,8 +2418,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f080037
 			public const int SYM = 2131230775;
 			
-			// aapt resource value: 0x7f080103
-			public const int action0 = 2131230979;
+			// aapt resource value: 0x7f08010d
+			public const int action0 = 2131230989;
 			
 			// aapt resource value: 0x7f08007c
 			public const int action_bar = 2131230844;
@@ -2442,17 +2442,17 @@ namespace EnaApp
 			// aapt resource value: 0x7f08005a
 			public const int action_bar_title = 2131230810;
 			
-			// aapt resource value: 0x7f080100
-			public const int action_container = 2131230976;
+			// aapt resource value: 0x7f08010a
+			public const int action_container = 2131230986;
 			
 			// aapt resource value: 0x7f08007d
 			public const int action_context_bar = 2131230845;
 			
-			// aapt resource value: 0x7f080107
-			public const int action_divider = 2131230983;
+			// aapt resource value: 0x7f080111
+			public const int action_divider = 2131230993;
 			
-			// aapt resource value: 0x7f080101
-			public const int action_image = 2131230977;
+			// aapt resource value: 0x7f08010b
+			public const int action_image = 2131230987;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2469,11 +2469,11 @@ namespace EnaApp
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f080102
-			public const int action_text = 2131230978;
+			// aapt resource value: 0x7f08010c
+			public const int action_text = 2131230988;
 			
-			// aapt resource value: 0x7f080110
-			public const int actions = 2131230992;
+			// aapt resource value: 0x7f08011a
+			public const int actions = 2131231002;
 			
 			// aapt resource value: 0x7f08005d
 			public const int activity_chooser_view_content = 2131230813;
@@ -2517,23 +2517,26 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800e9
 			public const int button4 = 2131230953;
 			
-			// aapt resource value: 0x7f080130
-			public const int button5 = 2131231024;
+			// aapt resource value: 0x7f08013a
+			public const int button5 = 2131231034;
 			
-			// aapt resource value: 0x7f08013e
-			public const int button6 = 2131231038;
+			// aapt resource value: 0x7f080148
+			public const int button6 = 2131231048;
 			
-			// aapt resource value: 0x7f08015a
-			public const int button7 = 2131231066;
+			// aapt resource value: 0x7f080164
+			public const int button7 = 2131231076;
 			
-			// aapt resource value: 0x7f080160
-			public const int button8 = 2131231072;
+			// aapt resource value: 0x7f08016a
+			public const int button8 = 2131231082;
 			
-			// aapt resource value: 0x7f080171
-			public const int button9 = 2131231089;
+			// aapt resource value: 0x7f08017b
+			public const int button9 = 2131231099;
 			
-			// aapt resource value: 0x7f0800f9
-			public const int buttonAddEtnia = 2131230969;
+			// aapt resource value: 0x7f080103
+			public const int buttonAddChief = 2131230979;
+			
+			// aapt resource value: 0x7f0800fa
+			public const int buttonAddEtnia = 2131230970;
 			
 			// aapt resource value: 0x7f0800cd
 			public const int buttonAddForestActivity = 2131230925;
@@ -2586,8 +2589,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800a7
 			public const int buttonTombali = 2131230887;
 			
-			// aapt resource value: 0x7f080104
-			public const int cancel_action = 2131230980;
+			// aapt resource value: 0x7f08010e
+			public const int cancel_action = 2131230990;
 			
 			// aapt resource value: 0x7f080045
 			public const int center = 2131230789;
@@ -2637,8 +2640,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800d9
 			public const int checkBox5 = 2131230937;
 			
-			// aapt resource value: 0x7f0800eb
-			public const int checkBox6 = 2131230955;
+			// aapt resource value: 0x7f0800ff
+			public const int checkBox6 = 2131230975;
 			
 			// aapt resource value: 0x7f0800ee
 			public const int checkBox7 = 2131230958;
@@ -2649,11 +2652,20 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800f0
 			public const int checkBox9 = 2131230960;
 			
+			// aapt resource value: 0x7f080100
+			public const int checkBoxCausesCommunity = 2131230976;
+			
+			// aapt resource value: 0x7f0800fc
+			public const int checkBoxCausesEthnic = 2131230972;
+			
+			// aapt resource value: 0x7f0800eb
+			public const int checkBoxReasonFoundation = 2131230955;
+			
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
 			
-			// aapt resource value: 0x7f08010c
-			public const int chronometer = 2131230988;
+			// aapt resource value: 0x7f080116
+			public const int chronometer = 2131230998;
 			
 			// aapt resource value: 0x7f08004e
 			public const int clip_horizontal = 2131230798;
@@ -2704,7 +2716,7 @@ namespace EnaApp
 			public const int disableHome = 2131230752;
 			
 			// aapt resource value: 0x7f0800ec
-			public const int editText1 = 2131230956;
+			public const int editTextFoundingReasonOthers = 2131230956;
 			
 			// aapt resource value: 0x7f08007e
 			public const int edit_query = 2131230846;
@@ -2712,8 +2724,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f080030
 			public const int end = 2131230768;
 			
-			// aapt resource value: 0x7f080112
-			public const int end_padder = 2131230994;
+			// aapt resource value: 0x7f08011c
+			public const int end_padder = 2131231004;
 			
 			// aapt resource value: 0x7f08003f
 			public const int enterAlways = 2131230783;
@@ -2763,6 +2775,15 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800ed
 			public const int gridLayout2 = 2131230957;
 			
+			// aapt resource value: 0x7f0800f9
+			public const int gridLayout3 = 2131230969;
+			
+			// aapt resource value: 0x7f0800fb
+			public const int gridLayoutRelationBetweenEthnics = 2131230971;
+			
+			// aapt resource value: 0x7f0800fe
+			public const int gridLayoutRelationBetweenNearCommunities = 2131230974;
+			
 			// aapt resource value: 0x7f0800ac
 			public const int gridLayoutSectors = 2131230892;
 			
@@ -2775,8 +2796,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f080062
 			public const int icon = 2131230818;
 			
-			// aapt resource value: 0x7f080111
-			public const int icon_group = 2131230993;
+			// aapt resource value: 0x7f08011b
+			public const int icon_group = 2131231003;
 			
 			// aapt resource value: 0x7f08003a
 			public const int ifRoom = 2131230778;
@@ -2796,8 +2817,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800aa
 			public const int imageViewSector = 2131230890;
 			
-			// aapt resource value: 0x7f08010d
-			public const int info = 2131230989;
+			// aapt resource value: 0x7f080117
+			public const int info = 2131230999;
 			
 			// aapt resource value: 0x7f080059
 			public const int italic = 2131230809;
@@ -2823,26 +2844,26 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800b1
 			public const int linearLayout2 = 2131230897;
 			
-			// aapt resource value: 0x7f080113
-			public const int linearLayout3 = 2131230995;
+			// aapt resource value: 0x7f08011d
+			public const int linearLayout3 = 2131231005;
 			
-			// aapt resource value: 0x7f080115
-			public const int linearLayout4 = 2131230997;
+			// aapt resource value: 0x7f08011f
+			public const int linearLayout4 = 2131231007;
 			
-			// aapt resource value: 0x7f080129
-			public const int linearLayout5 = 2131231017;
+			// aapt resource value: 0x7f080133
+			public const int linearLayout5 = 2131231027;
 			
-			// aapt resource value: 0x7f080131
-			public const int linearLayout6 = 2131231025;
+			// aapt resource value: 0x7f08013b
+			public const int linearLayout6 = 2131231035;
 			
-			// aapt resource value: 0x7f080140
-			public const int linearLayout7 = 2131231040;
+			// aapt resource value: 0x7f08014a
+			public const int linearLayout7 = 2131231050;
 			
-			// aapt resource value: 0x7f08015c
-			public const int linearLayout8 = 2131231068;
+			// aapt resource value: 0x7f080166
+			public const int linearLayout8 = 2131231078;
 			
-			// aapt resource value: 0x7f080162
-			public const int linearLayout9 = 2131231074;
+			// aapt resource value: 0x7f08016c
+			public const int linearLayout9 = 2131231084;
 			
 			// aapt resource value: 0x7f0800af
 			public const int linearLayoutCreateCommunity = 2131230895;
@@ -2853,14 +2874,14 @@ namespace EnaApp
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f080174
-			public const int masked = 2131231092;
+			// aapt resource value: 0x7f08017e
+			public const int masked = 2131231102;
 			
-			// aapt resource value: 0x7f080106
-			public const int media_actions = 2131230982;
+			// aapt resource value: 0x7f080110
+			public const int media_actions = 2131230992;
 			
-			// aapt resource value: 0x7f080172
-			public const int message = 2131231090;
+			// aapt resource value: 0x7f08017c
+			public const int message = 2131231100;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2883,14 +2904,14 @@ namespace EnaApp
 			// aapt resource value: 0x7f08001e
 			public const int normal = 2131230750;
 			
-			// aapt resource value: 0x7f08010f
-			public const int notification_background = 2131230991;
+			// aapt resource value: 0x7f080119
+			public const int notification_background = 2131231001;
 			
-			// aapt resource value: 0x7f080109
-			public const int notification_main_column = 2131230985;
+			// aapt resource value: 0x7f080113
+			public const int notification_main_column = 2131230995;
 			
-			// aapt resource value: 0x7f080108
-			public const int notification_main_column_container = 2131230984;
+			// aapt resource value: 0x7f080112
+			public const int notification_main_column_container = 2131230994;
 			
 			// aapt resource value: 0x7f08004c
 			public const int parallax = 2131230796;
@@ -2916,95 +2937,95 @@ namespace EnaApp
 			// aapt resource value: 0x7f08008d
 			public const int radioButton1 = 2131230861;
 			
-			// aapt resource value: 0x7f0800fe
-			public const int radioButton10 = 2131230974;
+			// aapt resource value: 0x7f080108
+			public const int radioButton10 = 2131230984;
 			
-			// aapt resource value: 0x7f0800ff
-			public const int radioButton11 = 2131230975;
-			
-			// aapt resource value: 0x7f080118
-			public const int radioButton12 = 2131231000;
-			
-			// aapt resource value: 0x7f080119
-			public const int radioButton13 = 2131231001;
-			
-			// aapt resource value: 0x7f08011a
-			public const int radioButton14 = 2131231002;
-			
-			// aapt resource value: 0x7f080120
-			public const int radioButton15 = 2131231008;
-			
-			// aapt resource value: 0x7f080121
-			public const int radioButton16 = 2131231009;
+			// aapt resource value: 0x7f080109
+			public const int radioButton11 = 2131230985;
 			
 			// aapt resource value: 0x7f080122
-			public const int radioButton17 = 2131231010;
+			public const int radioButton12 = 2131231010;
 			
 			// aapt resource value: 0x7f080123
-			public const int radioButton18 = 2131231011;
+			public const int radioButton13 = 2131231011;
 			
-			// aapt resource value: 0x7f080125
-			public const int radioButton19 = 2131231013;
+			// aapt resource value: 0x7f080124
+			public const int radioButton14 = 2131231012;
+			
+			// aapt resource value: 0x7f08012a
+			public const int radioButton15 = 2131231018;
+			
+			// aapt resource value: 0x7f08012b
+			public const int radioButton16 = 2131231019;
+			
+			// aapt resource value: 0x7f08012c
+			public const int radioButton17 = 2131231020;
+			
+			// aapt resource value: 0x7f08012d
+			public const int radioButton18 = 2131231021;
+			
+			// aapt resource value: 0x7f08012f
+			public const int radioButton19 = 2131231023;
 			
 			// aapt resource value: 0x7f08008e
 			public const int radioButton2 = 2131230862;
 			
-			// aapt resource value: 0x7f080126
-			public const int radioButton20 = 2131231014;
+			// aapt resource value: 0x7f080130
+			public const int radioButton20 = 2131231024;
 			
-			// aapt resource value: 0x7f080127
-			public const int radioButton21 = 2131231015;
+			// aapt resource value: 0x7f080131
+			public const int radioButton21 = 2131231025;
 			
-			// aapt resource value: 0x7f080134
-			public const int radioButton22 = 2131231028;
+			// aapt resource value: 0x7f08013e
+			public const int radioButton22 = 2131231038;
 			
-			// aapt resource value: 0x7f080135
-			public const int radioButton23 = 2131231029;
+			// aapt resource value: 0x7f08013f
+			public const int radioButton23 = 2131231039;
 			
-			// aapt resource value: 0x7f080138
-			public const int radioButton24 = 2131231032;
+			// aapt resource value: 0x7f080142
+			public const int radioButton24 = 2131231042;
 			
-			// aapt resource value: 0x7f080139
-			public const int radioButton25 = 2131231033;
+			// aapt resource value: 0x7f080143
+			public const int radioButton25 = 2131231043;
 			
-			// aapt resource value: 0x7f08014a
-			public const int radioButton26 = 2131231050;
+			// aapt resource value: 0x7f080154
+			public const int radioButton26 = 2131231060;
 			
-			// aapt resource value: 0x7f08014b
-			public const int radioButton27 = 2131231051;
+			// aapt resource value: 0x7f080155
+			public const int radioButton27 = 2131231061;
 			
-			// aapt resource value: 0x7f08014e
-			public const int radioButton28 = 2131231054;
+			// aapt resource value: 0x7f080158
+			public const int radioButton28 = 2131231064;
 			
-			// aapt resource value: 0x7f08014f
-			public const int radioButton29 = 2131231055;
+			// aapt resource value: 0x7f080159
+			public const int radioButton29 = 2131231065;
 			
 			// aapt resource value: 0x7f08008f
 			public const int radioButton3 = 2131230863;
 			
-			// aapt resource value: 0x7f080152
-			public const int radioButton30 = 2131231058;
+			// aapt resource value: 0x7f08015c
+			public const int radioButton30 = 2131231068;
 			
-			// aapt resource value: 0x7f080153
-			public const int radioButton31 = 2131231059;
+			// aapt resource value: 0x7f08015d
+			public const int radioButton31 = 2131231069;
 			
-			// aapt resource value: 0x7f080158
-			public const int radioButton32 = 2131231064;
+			// aapt resource value: 0x7f080162
+			public const int radioButton32 = 2131231074;
 			
-			// aapt resource value: 0x7f080159
-			public const int radioButton33 = 2131231065;
+			// aapt resource value: 0x7f080163
+			public const int radioButton33 = 2131231075;
 			
-			// aapt resource value: 0x7f080169
-			public const int radioButton34 = 2131231081;
+			// aapt resource value: 0x7f080173
+			public const int radioButton34 = 2131231091;
 			
-			// aapt resource value: 0x7f08016a
-			public const int radioButton35 = 2131231082;
+			// aapt resource value: 0x7f080174
+			public const int radioButton35 = 2131231092;
 			
-			// aapt resource value: 0x7f08016f
-			public const int radioButton36 = 2131231087;
+			// aapt resource value: 0x7f080179
+			public const int radioButton36 = 2131231097;
 			
-			// aapt resource value: 0x7f080170
-			public const int radioButton37 = 2131231088;
+			// aapt resource value: 0x7f08017a
+			public const int radioButton37 = 2131231098;
 			
 			// aapt resource value: 0x7f080093
 			public const int radioButton4 = 2131230867;
@@ -3015,56 +3036,56 @@ namespace EnaApp
 			// aapt resource value: 0x7f080095
 			public const int radioButton6 = 2131230869;
 			
-			// aapt resource value: 0x7f0800fa
-			public const int radioButton7 = 2131230970;
+			// aapt resource value: 0x7f080104
+			public const int radioButton7 = 2131230980;
 			
-			// aapt resource value: 0x7f0800fb
-			public const int radioButton8 = 2131230971;
+			// aapt resource value: 0x7f080105
+			public const int radioButton8 = 2131230981;
 			
-			// aapt resource value: 0x7f0800fd
-			public const int radioButton9 = 2131230973;
+			// aapt resource value: 0x7f080107
+			public const int radioButton9 = 2131230983;
 			
 			// aapt resource value: 0x7f08008c
 			public const int radioGroup1 = 2131230860;
 			
-			// aapt resource value: 0x7f08014d
-			public const int radioGroup10 = 2131231053;
-			
-			// aapt resource value: 0x7f080151
-			public const int radioGroup11 = 2131231057;
-			
 			// aapt resource value: 0x7f080157
-			public const int radioGroup12 = 2131231063;
+			public const int radioGroup10 = 2131231063;
 			
-			// aapt resource value: 0x7f080168
-			public const int radioGroup13 = 2131231080;
+			// aapt resource value: 0x7f08015b
+			public const int radioGroup11 = 2131231067;
 			
-			// aapt resource value: 0x7f08016e
-			public const int radioGroup14 = 2131231086;
+			// aapt resource value: 0x7f080161
+			public const int radioGroup12 = 2131231073;
+			
+			// aapt resource value: 0x7f080172
+			public const int radioGroup13 = 2131231090;
+			
+			// aapt resource value: 0x7f080178
+			public const int radioGroup14 = 2131231096;
 			
 			// aapt resource value: 0x7f080092
 			public const int radioGroup2 = 2131230866;
 			
-			// aapt resource value: 0x7f0800fc
-			public const int radioGroup3 = 2131230972;
+			// aapt resource value: 0x7f080106
+			public const int radioGroup3 = 2131230982;
 			
-			// aapt resource value: 0x7f080117
-			public const int radioGroup4 = 2131230999;
+			// aapt resource value: 0x7f080121
+			public const int radioGroup4 = 2131231009;
 			
-			// aapt resource value: 0x7f08011f
-			public const int radioGroup5 = 2131231007;
+			// aapt resource value: 0x7f080129
+			public const int radioGroup5 = 2131231017;
 			
-			// aapt resource value: 0x7f080124
-			public const int radioGroup6 = 2131231012;
+			// aapt resource value: 0x7f08012e
+			public const int radioGroup6 = 2131231022;
 			
-			// aapt resource value: 0x7f080133
-			public const int radioGroup7 = 2131231027;
+			// aapt resource value: 0x7f08013d
+			public const int radioGroup7 = 2131231037;
 			
-			// aapt resource value: 0x7f080137
-			public const int radioGroup8 = 2131231031;
+			// aapt resource value: 0x7f080141
+			public const int radioGroup8 = 2131231041;
 			
-			// aapt resource value: 0x7f080149
-			public const int radioGroup9 = 2131231049;
+			// aapt resource value: 0x7f080153
+			public const int radioGroup9 = 2131231059;
 			
 			// aapt resource value: 0x7f0800a9
 			public const int relativeLayoutSectorParent = 2131230889;
@@ -3072,11 +3093,11 @@ namespace EnaApp
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
 			
-			// aapt resource value: 0x7f08010e
-			public const int right_icon = 2131230990;
+			// aapt resource value: 0x7f080118
+			public const int right_icon = 2131231000;
 			
-			// aapt resource value: 0x7f08010a
-			public const int right_side = 2131230986;
+			// aapt resource value: 0x7f080114
+			public const int right_side = 2131230996;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -3177,23 +3198,23 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800e2
 			public const int spinner3 = 2131230946;
 			
-			// aapt resource value: 0x7f080114
-			public const int spinner4 = 2131230996;
+			// aapt resource value: 0x7f08011e
+			public const int spinner4 = 2131231006;
 			
-			// aapt resource value: 0x7f08012b
-			public const int spinner5 = 2131231019;
+			// aapt resource value: 0x7f080135
+			public const int spinner5 = 2131231029;
 			
-			// aapt resource value: 0x7f080142
-			public const int spinner6 = 2131231042;
+			// aapt resource value: 0x7f08014c
+			public const int spinner6 = 2131231052;
 			
-			// aapt resource value: 0x7f080147
-			public const int spinner7 = 2131231047;
+			// aapt resource value: 0x7f080151
+			public const int spinner7 = 2131231057;
 			
-			// aapt resource value: 0x7f08015d
-			public const int spinner8 = 2131231069;
+			// aapt resource value: 0x7f080167
+			public const int spinner8 = 2131231079;
 			
-			// aapt resource value: 0x7f080164
-			public const int spinner9 = 2131231076;
+			// aapt resource value: 0x7f08016e
+			public const int spinner9 = 2131231086;
 			
 			// aapt resource value: 0x7f0800cb
 			public const int spinnerForestActivity = 2131230923;
@@ -3219,8 +3240,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
 			
-			// aapt resource value: 0x7f080105
-			public const int status_bar_latest_event_content = 2131230981;
+			// aapt resource value: 0x7f08010f
+			public const int status_bar_latest_event_content = 2131230991;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -3243,26 +3264,26 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800ae
 			public const int textInputEditText1 = 2131230894;
 			
-			// aapt resource value: 0x7f08013d
-			public const int textInputEditText10 = 2131231037;
+			// aapt resource value: 0x7f080147
+			public const int textInputEditText10 = 2131231047;
 			
-			// aapt resource value: 0x7f080143
-			public const int textInputEditText11 = 2131231043;
+			// aapt resource value: 0x7f08014d
+			public const int textInputEditText11 = 2131231053;
 			
-			// aapt resource value: 0x7f080145
-			public const int textInputEditText12 = 2131231045;
-			
-			// aapt resource value: 0x7f080155
-			public const int textInputEditText13 = 2131231061;
+			// aapt resource value: 0x7f08014f
+			public const int textInputEditText12 = 2131231055;
 			
 			// aapt resource value: 0x7f08015f
-			public const int textInputEditText14 = 2131231071;
+			public const int textInputEditText13 = 2131231071;
 			
-			// aapt resource value: 0x7f080166
-			public const int textInputEditText15 = 2131231078;
+			// aapt resource value: 0x7f080169
+			public const int textInputEditText14 = 2131231081;
 			
-			// aapt resource value: 0x7f08016c
-			public const int textInputEditText16 = 2131231084;
+			// aapt resource value: 0x7f080170
+			public const int textInputEditText15 = 2131231088;
+			
+			// aapt resource value: 0x7f080176
+			public const int textInputEditText16 = 2131231094;
 			
 			// aapt resource value: 0x7f0800de
 			public const int textInputEditText2 = 2131230942;
@@ -3276,17 +3297,23 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800e8
 			public const int textInputEditText5 = 2131230952;
 			
-			// aapt resource value: 0x7f08011c
-			public const int textInputEditText6 = 2131231004;
+			// aapt resource value: 0x7f080126
+			public const int textInputEditText6 = 2131231014;
 			
-			// aapt resource value: 0x7f08012d
-			public const int textInputEditText7 = 2131231021;
+			// aapt resource value: 0x7f080137
+			public const int textInputEditText7 = 2131231031;
 			
-			// aapt resource value: 0x7f08012f
-			public const int textInputEditText8 = 2131231023;
+			// aapt resource value: 0x7f080139
+			public const int textInputEditText8 = 2131231033;
 			
-			// aapt resource value: 0x7f08013b
-			public const int textInputEditText9 = 2131231035;
+			// aapt resource value: 0x7f080145
+			public const int textInputEditText9 = 2131231045;
+			
+			// aapt resource value: 0x7f080102
+			public const int textInputEditTextCurrentChiefs = 2131230978;
+			
+			// aapt resource value: 0x7f0800fd
+			public const int textInputEditTextEthnicsInTabanca = 2131230973;
 			
 			// aapt resource value: 0x7f0800cc
 			public const int textInputEditTextForestActivity = 2131230924;
@@ -3296,6 +3323,9 @@ namespace EnaApp
 			
 			// aapt resource value: 0x7f0800ea
 			public const int textInputEditTextFounderName = 2131230954;
+			
+			// aapt resource value: 0x7f080101
+			public const int textInputEditTextNearCommunity = 2131230977;
 			
 			// aapt resource value: 0x7f0800d0
 			public const int textInputEditTextOtherActivity = 2131230928;
@@ -3327,101 +3357,101 @@ namespace EnaApp
 			// aapt resource value: 0x7f0800e6
 			public const int textView14 = 2131230950;
 			
-			// aapt resource value: 0x7f080116
-			public const int textView15 = 2131230998;
+			// aapt resource value: 0x7f080120
+			public const int textView15 = 2131231008;
 			
-			// aapt resource value: 0x7f08011b
-			public const int textView16 = 2131231003;
+			// aapt resource value: 0x7f080125
+			public const int textView16 = 2131231013;
 			
-			// aapt resource value: 0x7f08011d
-			public const int textView17 = 2131231005;
-			
-			// aapt resource value: 0x7f08011e
-			public const int textView18 = 2131231006;
+			// aapt resource value: 0x7f080127
+			public const int textView17 = 2131231015;
 			
 			// aapt resource value: 0x7f080128
-			public const int textView19 = 2131231016;
+			public const int textView18 = 2131231016;
+			
+			// aapt resource value: 0x7f080132
+			public const int textView19 = 2131231026;
 			
 			// aapt resource value: 0x7f080091
 			public const int textView2 = 2131230865;
 			
-			// aapt resource value: 0x7f08012a
-			public const int textView20 = 2131231018;
-			
-			// aapt resource value: 0x7f08012c
-			public const int textView21 = 2131231020;
-			
-			// aapt resource value: 0x7f08012e
-			public const int textView22 = 2131231022;
-			
-			// aapt resource value: 0x7f080132
-			public const int textView23 = 2131231026;
+			// aapt resource value: 0x7f080134
+			public const int textView20 = 2131231028;
 			
 			// aapt resource value: 0x7f080136
-			public const int textView24 = 2131231030;
+			public const int textView21 = 2131231030;
 			
-			// aapt resource value: 0x7f08013a
-			public const int textView25 = 2131231034;
+			// aapt resource value: 0x7f080138
+			public const int textView22 = 2131231032;
 			
 			// aapt resource value: 0x7f08013c
-			public const int textView26 = 2131231036;
+			public const int textView23 = 2131231036;
 			
-			// aapt resource value: 0x7f08013f
-			public const int textView27 = 2131231039;
-			
-			// aapt resource value: 0x7f080141
-			public const int textView28 = 2131231041;
+			// aapt resource value: 0x7f080140
+			public const int textView24 = 2131231040;
 			
 			// aapt resource value: 0x7f080144
-			public const int textView29 = 2131231044;
+			public const int textView25 = 2131231044;
+			
+			// aapt resource value: 0x7f080146
+			public const int textView26 = 2131231046;
+			
+			// aapt resource value: 0x7f080149
+			public const int textView27 = 2131231049;
+			
+			// aapt resource value: 0x7f08014b
+			public const int textView28 = 2131231051;
+			
+			// aapt resource value: 0x7f08014e
+			public const int textView29 = 2131231054;
 			
 			// aapt resource value: 0x7f080096
 			public const int textView3 = 2131230870;
 			
-			// aapt resource value: 0x7f080146
-			public const int textView30 = 2131231046;
-			
-			// aapt resource value: 0x7f080148
-			public const int textView31 = 2131231048;
-			
-			// aapt resource value: 0x7f08014c
-			public const int textView32 = 2131231052;
-			
 			// aapt resource value: 0x7f080150
-			public const int textView33 = 2131231056;
+			public const int textView30 = 2131231056;
 			
-			// aapt resource value: 0x7f080154
-			public const int textView34 = 2131231060;
+			// aapt resource value: 0x7f080152
+			public const int textView31 = 2131231058;
 			
 			// aapt resource value: 0x7f080156
-			public const int textView35 = 2131231062;
+			public const int textView32 = 2131231062;
 			
-			// aapt resource value: 0x7f08015b
-			public const int textView36 = 2131231067;
+			// aapt resource value: 0x7f08015a
+			public const int textView33 = 2131231066;
 			
 			// aapt resource value: 0x7f08015e
-			public const int textView37 = 2131231070;
+			public const int textView34 = 2131231070;
 			
-			// aapt resource value: 0x7f080161
-			public const int textView38 = 2131231073;
+			// aapt resource value: 0x7f080160
+			public const int textView35 = 2131231072;
 			
-			// aapt resource value: 0x7f080163
-			public const int textView39 = 2131231075;
+			// aapt resource value: 0x7f080165
+			public const int textView36 = 2131231077;
+			
+			// aapt resource value: 0x7f080168
+			public const int textView37 = 2131231080;
+			
+			// aapt resource value: 0x7f08016b
+			public const int textView38 = 2131231083;
+			
+			// aapt resource value: 0x7f08016d
+			public const int textView39 = 2131231085;
 			
 			// aapt resource value: 0x7f0800d3
 			public const int textView4 = 2131230931;
 			
-			// aapt resource value: 0x7f080165
-			public const int textView40 = 2131231077;
+			// aapt resource value: 0x7f08016f
+			public const int textView40 = 2131231087;
 			
-			// aapt resource value: 0x7f080167
-			public const int textView41 = 2131231079;
+			// aapt resource value: 0x7f080171
+			public const int textView41 = 2131231089;
 			
-			// aapt resource value: 0x7f08016b
-			public const int textView42 = 2131231083;
+			// aapt resource value: 0x7f080175
+			public const int textView42 = 2131231093;
 			
-			// aapt resource value: 0x7f08016d
-			public const int textView43 = 2131231085;
+			// aapt resource value: 0x7f080177
+			public const int textView43 = 2131231095;
 			
 			// aapt resource value: 0x7f0800d6
 			public const int textView5 = 2131230934;
@@ -3459,8 +3489,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f080015
 			public const int textinput_error = 2131230741;
 			
-			// aapt resource value: 0x7f08010b
-			public const int time = 2131230987;
+			// aapt resource value: 0x7f080115
+			public const int time = 2131230997;
 			
 			// aapt resource value: 0x7f08001c
 			public const int title = 2131230748;
@@ -3510,8 +3540,8 @@ namespace EnaApp
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f080173
-			public const int visible = 2131231091;
+			// aapt resource value: 0x7f08017d
+			public const int visible = 2131231101;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

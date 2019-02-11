@@ -18,7 +18,8 @@ namespace EnaApp
         {
             {"bafata",  new List<string> {"Bafata", "Bambadinca", "Cuntuboel","Galomaro", "Gamamundo", "Xitole"}},
             {"biombo",  new List<string> {  "Prabis", "Quinhamel", "Safim"}},
-            {"cacheu", new List<string> {"Bigene", "Bula", "Cacheu", "Caio", "Canchungo", "Sao Domingos"} }
+            {"cacheu", new List<string> {"Bigene", "Bula", "Cacheu", "Caio", "Canchungo", "Sao Domingos"} },
+            {"gabu", new List<string> {"Boe", "Gabu", "Piche", "Pirada", "Sonaco"} }
         };
 
         protected override void OnCreate(Bundle savedInstanceState)

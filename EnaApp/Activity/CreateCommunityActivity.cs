@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -14,9 +15,18 @@ namespace EnaApp
     [Activity(Label = "CreateCommunityActivity")]
     public class CreateCommunityActivity : Activity, IDialogInterfaceOnClickListener
     {
+        // IDs of tabancas to be added to community
+        private List<string> _IdTabancas = new List<string>();
+        private string _mainTabancaId;
+
+        private int _countAdd = 0;
+
+        public string ID { get; } = Guid.NewGuid().ToString();
+
         public void OnClick(IDialogInterface dialog, int which)
         {
             //throw new System.NotImplementedException();
+
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -68,22 +78,29 @@ namespace EnaApp
             XElement rootSector = XmlUtils.GetRootSector();
 
             // only filter the tabancas that doesn't belong to a community already
-            IEnumerable<XElement> tabancas = rootSector.Element("Tabancas")?
-                .Elements("Tabanca")?.Where(el => string.IsNullOrEmpty(el.Element("CommunityID")?.Value));
+            // ReSharper disable once PossibleNullReferenceException
+            IEnumerable<XElement> tabancas = rootSector.Element("Tabancas")
+                .Elements("Tabanca")
+                .Where(el =>
+                    string.IsNullOrEmpty(el.Element("Name")?.Value) == false &&
+                    string.IsNullOrEmpty(el.Element("ID")?.Value) == false &&
+                    string.IsNullOrEmpty(el.Element("CommunityID")?.Value)).ToList();
 
             // TODO: handle when tabancas is null
 
-            IEnumerable<Tabanca> listTabanca = tabancas.Select(el => new Tabanca
+            var listTabanca = tabancas.Select(el => new Tabanca
             {
                 ID = el.Element("ID").Value,
                 Name = el.Element("Name").Value,
             });
 
-            Spinner _spinnerTabanca = FindViewById<Spinner>(Resource.Id.spinner1);
-            _spinnerTabanca.Adapter = new ArrayAdapter<Tabanca>(this, Android.Resource.Layout.SimpleSpinnerDropDownItem,
+            var spinnerTabanca = FindViewById<Spinner>(Resource.Id.spinner1);
+            spinnerTabanca.Adapter = new ArrayAdapter<Tabanca>(this, Android.Resource.Layout.SimpleSpinnerDropDownItem,
                listTabanca.ToList());
 
-            FindViewById<Button>(Resource.Id.buttonDoneCreateCommunity).Click += (sender, e) =>
+            var buttonCreateCommunity = FindViewById<Button>(Resource.Id.buttonDoneCreateCommunity);
+
+            buttonCreateCommunity.Click += (sender, e) =>
             {
                 string communityName = FindViewById<TextInputEditText>(Resource.Id.textInputEditText1).Text;
 
@@ -94,6 +111,45 @@ namespace EnaApp
 
                 }
 
+                var xSector = XmlUtils.GetRootSector();
+
+                // community with same name already exit in current sector
+                if (xSector.Element("Communities")?.Elements("Community").Any(c => c.Element("Name")?.Value.Equals(communityName, StringComparison.OrdinalIgnoreCase) == true) == true)
+                {
+                    // add community to xml file
+                    var dBuilder = new AlertDialog.Builder(this, Android.Resource.Style.ThemeMaterialDialogAlert);
+                    dBuilder.SetTitle("Erro!");
+                    dBuilder.SetMessage("A community with same name already exits!");
+                    dBuilder.SetPositiveButton(Android.Resource.String.Yes, this);
+                    dBuilder.SetNegativeButton(Android.Resource.String.No, this);
+                    dBuilder.SetIcon(Android.Resource.Drawable.IcDialogInfo);
+                    dBuilder.Show();
+                    return;
+                }
+
+                var el = new XElement("Community",
+                    new XElement("ID", ID), // community id
+                    new XElement("Name", communityName),
+                    new XElement("MainID", _mainTabancaId ?? string.Empty),
+                    new XElement("Tabancas",
+                    _IdTabancas.Select(id => new XElement("ID", id)).ToList())
+                    );
+
+                //var xTabanca = XmlUtils.GetRootSector().Element("Tabancas").Elements("Tabanca")
+                //    .First(t => t.Element("ID").Value.Equals(selTabanca.ID));
+
+                //if (xTabanca.Element("CommunityID") == null)
+                //{
+                //    xTabanca.Add(new XElement("CommunityID", ID));
+                //    XmlUtils.Save();
+                //}
+
+
+                // ReSharper disable once PossibleNullReferenceException
+                xSector.Element("Communities").Add(el);
+
+                XmlUtils.Save();
+
                 // add community to xml file
                 var dialogBuilder = new AlertDialog.Builder(this, Android.Resource.Style.ThemeMaterialDialogAlert);
                 dialogBuilder.SetTitle("Comunidade criada!");
@@ -102,24 +158,42 @@ namespace EnaApp
                 dialogBuilder.SetNegativeButton(Android.Resource.String.No, this);
                 dialogBuilder.SetIcon(Android.Resource.Drawable.IcDialogInfo);
                 dialogBuilder.Show();
+
+                Finish();
             };
 
             FindViewById<Button>(Resource.Id.buttonAddTabancaToCommunity).Click += (sender, e) =>
             {
-                // get select tabanca and store the it in community
-                MainActivity.AppContext.Communities.First().Tabancas.Add(new Tabanca { Name = "New tabanca" });
+                Spinner spinnerTabancas = FindViewById<Spinner>(Resource.Id.spinner1);
+                var selTabanca = spinnerTabancas.SelectedItem.Cast<Tabanca>();
 
-                Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner1);
-                string tabanca = spinner.SelectedItem.ToString();
+                _IdTabancas.Add(selTabanca.ID);
+
+                var checkboxMain = FindViewById<CheckBox>(Resource.Id.checkBox1);
+                if (checkboxMain.Checked)
+                {
+                    _mainTabancaId = selTabanca.ID;
+                    // disable the main tabanca checkbox once one is added.
+                    checkboxMain.Enabled = false;
+                }
+
+                var adapter = (ArrayAdapter)spinnerTabancas.Adapter;
+                adapter.Remove(spinnerTabancas.SelectedItem);
+                adapter.NotifyDataSetChanged();
+
+                //spinnerTabancas.RemoveViewAt(spinnerTabancas.SelectedItemPosition);
 
                 var dialogBuilder = new AlertDialog.Builder(this, Android.Resource.Style.ThemeMaterialDialogAlert);
                 dialogBuilder.SetTitle("Adicionar tabanca");
-                dialogBuilder.SetMessage($"Tabanca {tabanca} adicionada com sucesso");
+                dialogBuilder.SetMessage($"Tabanca {selTabanca.Name} adicionada com sucesso");
                 dialogBuilder.SetPositiveButton(Android.Resource.String.Yes, this);
                 dialogBuilder.SetNegativeButton(Android.Resource.String.No, this);
                 dialogBuilder.SetIcon(Android.Resource.Drawable.IcDialogInfo);
                 dialogBuilder.Show();
-
+                if (++_countAdd == 3)
+                {
+                    buttonCreateCommunity.Enabled = true;
+                }
             };
 
         }

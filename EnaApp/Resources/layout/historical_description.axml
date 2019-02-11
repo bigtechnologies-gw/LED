@@ -10,6 +10,7 @@
     android:id="@+id/scrollView1">
 
     <LinearLayout
+        android:layout_marginBottom="20dp"
         android:layout_margin="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -154,14 +155,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox5" />
             <CheckBox
-                android:text="Outros "
+                android:text="Outros"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox6" />
+                android:id="@+id/checkBoxReasonFoundation" />
             <EditText
                 android:layout_width="wrap_content"
                 android:enabled="false"
-                android:id="@+id/editText1"
+                android:id="@+id/editTextFoundingReasonOthers"
                 android:minWidth="150dp" />
 
         </GridLayout>
@@ -248,7 +249,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/gridLayout2"
+            android:id="@+id/gridLayout3"
             >
 
             <CheckBox
@@ -304,6 +305,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView1" />
         <Spinner
+            android:entries="@array/etnies"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:id="@+id/spinner1" />
@@ -327,7 +329,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/gridLayout1">
+            android:id="@+id/gridLayoutRelationBetweenEthnics">
             <CheckBox
                 android:text="Boas"
                 android:id="@+id/checkBox5" />
@@ -339,13 +341,13 @@
                 android:id="@+id/checkBox3" />
             <CheckBox
                 android:text="Se, quais são as causas"
-                android:id="@+id/checkBox2" />
+                android:id="@+id/checkBoxCausesEthnic" />
 
             <android.support.design.widget.TextInputEditText
                 android:enabled="false"
                 android:minWidth="150dp"
                 android:layout_width="wrap_content"
-                android:id="@+id/textInputEditText1"
+                android:id="@+id/textInputEditTextEthnicsInTabanca"
                 android:layout_marginLeft="10.5dp" />
 
         </GridLayout>
@@ -364,7 +366,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/gridLayout2">
+            android:id="@+id/gridLayoutRelationBetweenNearCommunities">
             <CheckBox
                 android:text="Boas"
                 android:id="@+id/checkBox6" />
@@ -376,13 +378,13 @@
                 android:id="@+id/checkBox8" />
             <CheckBox
                 android:text="Se, quais são as causas"
-                android:id="@+id/checkBox9" />
+                android:id="@+id/checkBoxCausesCommunity" />
 
             <android.support.design.widget.TextInputEditText
                 android:enabled="false"
                 android:minWidth="150dp"
                 android:layout_width="wrap_content"
-                android:id="@+id/textInputEditText2"
+                android:id="@+id/textInputEditTextNearCommunity"
                 android:layout_marginLeft="10.5dp" />
 
         </GridLayout>
@@ -397,13 +399,13 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textInputEditText3" />
+            android:id="@+id/textInputEditTextCurrentChiefs" />
 
         <Button
             android:text="Adicionar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button1" />
+            android:id="@+id/buttonAddChief" />
 
 
     </LinearLayout>

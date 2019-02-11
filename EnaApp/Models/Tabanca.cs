@@ -10,9 +10,10 @@ namespace EnaApp
     {
         private readonly XElement el;
 
+        public static Tabanca Build() => new Tabanca() { ID = Guid.NewGuid().ToString() };
+
         public Tabanca()
         {
-            ID = Guid.NewGuid().ToString();
         }
 
         public Tabanca(XElement el)
@@ -56,7 +57,8 @@ namespace EnaApp
         public string FounderEthnic { get; set; }
 
         // Agricultura, caca, pesca...
-        public List<string> FoudingReasons { get; set; }
+        public List<string> FoundingReasons { get; set; }
+        public string FoudingReasongOthers { get; set; } // for "Others" reason.
 
         public List<string> PastIssues { get; set; }
         public List<string> CurrentIssues { get; set; }
@@ -65,12 +67,14 @@ namespace EnaApp
 
 
         // TODO: handle cause when there is comflict
-        public IList<string> RalationBetweenEthicGroups { get; set; }
+        public IList<string> RelationBetweenEthnicGroups { get; set; }
+
+        public List<string> RelationBetweenNearCommunities { get; set; }
 
         /// <summary>
         /// Name of current representatives in tabanca...
         /// </summary>
-        public List<string> CurrentTabancaRepresentatives { get; set; }
+        public List<string> CurrentTabancaChiefs { get; set; }
 
         // LOCAL GORVERNATION
         public IList<string> PublicServices { get; set; } // TODO: IMPROVE THE MODEL
@@ -95,13 +99,13 @@ namespace EnaApp
             XElement tabanca = new XElement("Tabanca");
 
             // filter non-generic type first
-            foreach (PropertyInfo propInfo in propsWithValue.Where( p => p.PropertyType != typeof(IList<string>) && p.PropertyType != typeof(List<string>)))
+            foreach (PropertyInfo propInfo in propsWithValue.Where(p => p.PropertyType != typeof(IList<string>) && p.PropertyType != typeof(List<string>)))
             {
                 tabanca.Add(new XElement(propInfo.Name, propInfo.GetValue(this)));
             }
 
             // generic value
-            foreach (PropertyInfo propInfo in propsWithValue.Where( p => p.PropertyType.IsGenericType))
+            foreach (PropertyInfo propInfo in propsWithValue.Where(p => p.PropertyType.IsGenericType))
             {
                 IList<string> listItem = (IList<string>)propInfo.GetValue(this);
                 XElement xEl = new XElement(propInfo.Name);

@@ -68,7 +68,6 @@
 			android:tag="cacheu"
 			android:id="@+id/buttonCacheu" />
 		<Button
-            android:enabled="false"
 			style="@style/LEDButtonStyle"
 			android:text="Gabu"
 			android:tag="gabu"

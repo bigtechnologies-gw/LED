@@ -72,7 +72,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout2">
             <Spinner
-                android:entries="@array/list_tabancas_data"
                 android:layout_width="288.0dp"
                 android:layout_height="58.0dp"
                 android:id="@+id/spinner1"
@@ -93,6 +92,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonAddTabancaToCommunity" />
         <Button
+            android:enabled="false"
             android:textSize="36sp"
             android:text="Criar comunidade"
             android:layout_width="469.5dp"

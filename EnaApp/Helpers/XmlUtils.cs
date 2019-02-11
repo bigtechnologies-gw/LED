@@ -15,10 +15,10 @@ namespace EnaApp.Helpers
             //File.Delete(Configs.DataFile);
 
             // delete file if it's been existing for more then 10 minutes
-            if(File.GetCreationTimeUtc(Configs.DataFile) < DateTime.UtcNow.AddMinutes(-5))
-            {
-                File.Delete(Configs.DataFile);
-            }
+            //if(File.GetCreationTimeUtc(Configs.DataFile) < DateTime.UtcNow.AddMinutes(-5))
+            //{
+            //    File.Delete(Configs.DataFile);
+            //}
 
             if (File.Exists(Configs.DataFile) == false)
             {
@@ -43,9 +43,18 @@ namespace EnaApp.Helpers
                 XElement region = _xDoc.Root.Elements("Region")
                 .FirstOrDefault(el => el.Element("Name").Value.Equals(appContext.Region, System.StringComparison.OrdinalIgnoreCase));
 
+                // region not created yet!`
                 if (region == null)
                 {
-                    throw new System.InvalidOperationException();
+                    region = new XElement("Region",
+                        new XElement("Name", StringUtils.CapitalizeFirstLetter(appContext.Region)),
+                        new XElement("Sectors",
+                            new XElement("Sector",
+                                new XElement("Name", appContext.Sector),
+                                new XElement("Tabancas"),
+                                new XElement("Communities"))));
+                    _xDoc.Element("Regions").Add(region);
+                    Save();
                 }
 
                 EnsureSector(MainActivity.AppContext.Sector, region);
@@ -83,7 +92,7 @@ namespace EnaApp.Helpers
             _xDoc = _xDoc ?? XDocument.Load(Configs.DataFile);
             var appContext = MainActivity.AppContext;
 
-            const System.StringComparison sc = System.StringComparison.OrdinalIgnoreCase;
+            const System.StringComparison sc = StringComparison.OrdinalIgnoreCase;
             XElement region = _xDoc.Root.Elements("Region")
                 .FirstOrDefault(el => el.Element("Name").Value.Equals(appContext.Region, sc));
             return EnsureSector(MainActivity.AppContext.Sector, region);

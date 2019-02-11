@@ -21,7 +21,7 @@ namespace EnaApp
             SetContentView(Resource.Layout.create_tabanca_layout);
             // Create your application here
 
-            NewTabanca = new Tabanca();
+            NewTabanca = Tabanca.Build();
         }
 
         public override View OnCreateView(string name, Context context, IAttributeSet attrs)
@@ -44,31 +44,7 @@ namespace EnaApp
 
             //Java.IO.File file = FilesDir;
 
-            string file = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), "data_file.xml");
-
-
-            // Region->Sector->
             // -------> 
-
-            AppContext appContext = MainActivity.AppContext;
-            // update it
-            if (File.Exists(file))
-            {
-                var xdoc = XDocument.Load(file);
-
-                XElement currentSector = xdoc.Element(appContext.Region)
-                    .Element(appContext.Sector);
-                //currentSector.Add()
-            }
-            else
-            {
-                var xdoc = new XDocument();
-                // root
-                xdoc.Add(new XElement("regions"));
-                xdoc.Root.Add(new XElement("region", new XElement("name", appContext.Region)));
-                //xdoc.Element
-            }
-
             // close activity
             //Finish()
 

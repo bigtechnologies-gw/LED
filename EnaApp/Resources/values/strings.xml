@@ -31,16 +31,16 @@
   </string-array>
 
   <string-array name="etnies">
-    <item>Bijagós</item>
-    <item>Balantas</item>
+    <item>Bijagó</item>
+    <item>Balanta</item>
     <item>Diúlas‎</item>
-    <item>Fulas</item>
-    <item>Felupes</item>
-    <item>Mandingas</item>
-    <item>Manjacos</item>
-    <item>Nalus</item>
-    <item>Papéis</item>
-    <item>Sossos</item>
+    <item>Fula</item>
+    <item>Felupe</item>
+    <item>Mandinga</item>
+    <item>Manjaco</item>
+    <item>Nalu</item>
+    <item>Papel</item>
+    <item>Sosso</item>
   </string-array>
 
   <string-array name="agricultura_data">

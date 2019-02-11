@@ -81,7 +81,6 @@
 			android:textSize="30dp"
 			android:id="@+id/buttonCacheu" />
 		<Button
-            android:enabled="false"
 			android:text="Gabu"
 			android:tag="gabu"
 			android:width="@dimen/regionWidth"
